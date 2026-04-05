@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mega Quiz 1000</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #f0f2f5; display: flex; justify-content: center; padding: 20px; }
+        .card { background: white; padding: 20px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); width: 100%; max-width: 400px; text-align: center; }
+        .category { color: #007bff; font-weight: bold; text-transform: uppercase; font-size: 12px; }
+        .question { font-size: 1.2rem; margin: 20px 0; min-height: 80px; }
+        input { width: 80%; padding: 10px; border: 2px solid #ddd; border-radius: 5px; margin-bottom: 10px; }
+        button { background: #28a745; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; width: 85%; }
+        .score { margin-top: 20px; font-size: 14px; color: #666; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <div id="category" class="category">Loading...</div>
+    <div id="question" class="question">Press Start to Begin!</div>
+    <input type="text" id="answerInput" placeholder="Type your answer here...">
+    <button onclick="checkAnswer()">Submit Answer</button>
+    <div class="score">Score: <span id="score">0</span> / <span id="total">0</span></div>
+</div>
+
+<script>
+    // In a real app, you would fetch this from your questions.json file
+    const questions = [
+        {q: "Who was the first Mughal Emperor?", a: "Babur", cat: "Indian History"},
+        {q: "What is the powerhouse of the cell?", a: "Mitochondria", cat: "Science"},
+        {q: "Which planet is the Red Planet?", a: "Mars", cat: "Space"}
+    ];
+
+    let currentQ = {};
+    let score = 0;
+    let total = 0;
+
+    function nextQuestion() {
+        const randomIndex = Math.floor(Math.random() * questions.length);
+        currentQ = questions[randomIndex];
+        document.getElementById('question').innerText = currentQ.q;
+        document.getElementById('category').innerText = currentQ.cat;
+        document.getElementById('answerInput').value = "";
+    }
+
+    function checkAnswer() {
+        const userVal = document.getElementById('answerInput').value.trim().toLowerCase();
+        const correctVal = currentQ.a.toLowerCase();
+        
+        total++;
+        if (userVal === correctVal) {
+            alert("Correct! 🎯");
+            score++;
+        } else {
+            alert("Wrong! The answer was: " + currentQ.a);
+        }
+        
+        document.getElementById('score').innerText = score;
+        document.getElementById('total').innerText = total;
+        nextQuestion();
+    }
+
+    // Start the first question
+    nextQuestion();
+</script>
+
+</body>
+</html>

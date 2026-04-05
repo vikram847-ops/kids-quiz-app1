@@ -1,0 +1,73 @@
+[
+  {
+    "id": 1,
+    "cat": "Indian History",
+    "age": "15-20",
+    "q": "Who was the first Mughal Emperor to rule India?",
+    "a": "Babur"
+  },
+  {
+    "id": 2,
+    "cat": "Science",
+    "age": "8-10",
+    "q": "Which planet is known as the Red Planet?",
+    "a": "Mars"
+  },
+  {
+    "id": 3,
+    "cat": "Indian History",
+    "age": "15-20",
+    "q": "In which year did the Dandi March (Salt Satyagraha) begin?",
+    "a": "1930"
+  },
+  {
+    "id": 4,
+    "cat": "Space",
+    "age": "11-14",
+    "q": "What is the name of the galaxy that contains our Solar System?",
+    "a": "Milky Way"
+  },
+  {
+    "id": 5,
+    "cat": "Indian History",
+    "age": "15-20",
+    "q": "Who is known as the 'Iron Man of India'?",
+    "a": "Sardar Vallabhbhai Patel"
+  },
+  {
+    "id": 6,
+    "cat": "Science",
+    "age": "15-20",
+    "q": "What is the chemical symbol for Gold?",
+    "a": "Au"
+  },
+  {
+    "id": 7,
+    "cat": "Indian History",
+    "age": "11-14",
+    "q": "Who wrote the National Anthem of India?",
+    "a": "Rabindranath Tagore"
+  },
+  {
+    "id": 8,
+    "cat": "Science",
+    "age": "5-7",
+    "q": "How many legs does a spider have?",
+    "a": "8"
+  },
+  {
+    "id": 9,
+    "cat": "Geography",
+    "age": "15-20",
+    "q": "Which is the longest river in India?",
+    "a": "Ganges"
+  },
+  {
+    "id": 10,
+    "cat": "Space",
+    "age": "15-20",
+    "q": "What is the boundary around a black hole called?",
+    "a": "Event Horizon"
+  }
+]
+	
